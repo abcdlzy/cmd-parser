@@ -19,13 +19,13 @@ namespace cmd_parser
         {
             tbTgt.Text = tbSrc.Text;
             tbTgt.Text = tbTgt.Text.Replace("@", "^@");
-            tbTgt.Text = tbTgt.Text.Replace("%", "^%");
+            tbTgt.Text = tbTgt.Text.Replace("%", "%%");
             tbTgt.Text = tbTgt.Text.Replace(">", "^>");
             tbTgt.Text = tbTgt.Text.Replace("<", "^<");
             tbTgt.Text = tbTgt.Text.Replace("&", "^&");
             tbTgt.Text = tbTgt.Text.Replace("|", "^|");
             tbTgt.Text = tbTgt.Text.Replace("(", "^(");
-            tbTgt.Text = tbTgt.Text.Replace("\"", "^\"");
+            tbTgt.Text = tbTgt.Text.Replace("\"", "\"\"\"");
             tbTgt.Text = tbTgt.Text.Replace(")", "^)");
             tbTgt.Text = tbTgt.Text.Replace("!", "^!");
         }
@@ -34,13 +34,13 @@ namespace cmd_parser
         {
             tbSrc.Text = tbTgt.Text;
             tbSrc.Text = tbSrc.Text.Replace("^@", "@");
-            tbSrc.Text = tbSrc.Text.Replace("^%", "%");
+            tbSrc.Text = tbSrc.Text.Replace("%%", "%");
             tbSrc.Text = tbSrc.Text.Replace("^>", ">");
             tbSrc.Text = tbSrc.Text.Replace("^<", "<");
             tbSrc.Text = tbSrc.Text.Replace("^&", "&");
             tbSrc.Text = tbSrc.Text.Replace("^|", "|");
             tbSrc.Text = tbSrc.Text.Replace("^(", "(");
-            tbSrc.Text = tbSrc.Text.Replace("^\"", "\"");
+            tbSrc.Text = tbSrc.Text.Replace("\"\"\"", "\"");
             tbSrc.Text = tbSrc.Text.Replace("^)", ")");
             tbSrc.Text = tbSrc.Text.Replace("^!", "!");
         }
